@@ -182,6 +182,8 @@ class LDAPConnection (object):
         protocol = 'ldap'
         if self.config.getboolean('connection', 'ssl'):
             protocol = 'ldaps'
+        if self.config.getboolean('connection', 'ignore-cert-errors'):
+            _ldap.set_option(_ldap.OPT_X_TLS_REQUIRE_CERT, _ldap.OPT_X_TLS_ALLOW)
         url = '{0}://{1}:{2}'.format(
             protocol,
             self.config.get('connection', 'server'),
