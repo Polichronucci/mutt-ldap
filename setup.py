@@ -44,4 +44,5 @@ _setup(
         ],
     py_modules = ['mutt_ldap'],
     scripts = ['mutt_ldap.py'],
+    install_requires=['python-ldap'],
     )

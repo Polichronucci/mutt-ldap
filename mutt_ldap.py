@@ -31,8 +31,13 @@ import pickle as _pickle
 import sys as _sys
 import time as _time
 
-import ldap as _ldap
-import ldap.sasl as _ldap_sasl
+try:
+    import ldap as _ldap
+    import ldap.sasl as _ldap_sasl
+except ImportError:
+
+    # Ignore so we can import this for pip install
+    pass
 
 _xdg_import_error = None
 try:

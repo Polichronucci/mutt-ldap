@@ -44,6 +44,10 @@ standard::
 
   $ python setup.py install
 
+Or::
+
+  $ pip install .
+
 or you can just copy ``mutt_ldap.py`` into to your ``PATH``.
 
 Usage
