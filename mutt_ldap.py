@@ -142,7 +142,7 @@ CONFIG.set('connection', 'port', '389')  # set to 636 for default over SSL
 CONFIG.set('connection', 'ssl', 'no')
 CONFIG.set('connection', 'starttls', 'no')
 CONFIG.set('connection', 'basedn', 'ou=x co.,dc=example,dc=net')
-CONFIG.set('connection', 'ignore-cert-errors', 'yes')
+CONFIG.set('connection', 'ignore-cert-errors', 'no')
 CONFIG.add_section('auth')
 CONFIG.set('auth', 'user', '')
 CONFIG.set('auth', 'password', '')
